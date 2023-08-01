@@ -1,4 +1,4 @@
-#Cadastro Web 
+#Cadastro Web
 
 Software web escrito com tecnologias Java
 * frontend - HTML, CSS, Javascript com estilos em Bootstrap 5
