@@ -48,11 +48,14 @@ public class UsuarioRepositorio {
 		StringBuilder sql = new StringBuilder();
 		sql.append("insert into usuario ");
 		sql.append("(nome, email, senha) ");
-		sql.append("value(?,?,?)");
+		sql.append("values (?,?,?)");
 		//abrir uma conexão
 		try (Connection conn = this.getConnection();
 			PreparedStatement pst = conn.prepareStatement(sql.toString());
 			) {
+			pst.setString(1, usuario.getNome());			
+			pst.setString(2, usuario.getEmail());
+			pst.setString(3, usuario.getSenha());
 			
 			pst.execute();
 			
